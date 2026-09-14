@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative min-h-[770px] overflow-hidden bg-[#f1f1f3]">
      
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-200 "
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#f1f1f3] via-[#f1f1f3]/95 to-[#f1f1f3]/20" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[570px] max-w-[1170px] items-center">
+      <div className="relative z-10 mx-auto flex min-h-[770px] max-w-[1170px] items-center">
         <div className="w-full px-8 py-20 sm:px-12 lg:w-[58%] lg:px-0">
           {/* Heading */}
           <h1 className="max-w-[570px] text-[42px] font-medium leading-[1.55] tracking-[-1.8px] text-[#1d3544] sm:text-[48px] md:text-[50px]">
