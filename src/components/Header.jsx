@@ -10,7 +10,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="relative z-50 mx-3 flex h-[58px] items-center justify-between bg-[#243945] px-6 md:px-10 lg:px-[108px]">
+    <header className="relative z-50 flex h-[58px] items-center justify-between bg-[#243945] px-6 md:px-10 lg:px-[108px]">
       {/* Logo */}
       <NavLink
         to="/"
