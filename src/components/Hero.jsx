@@ -1,28 +1,33 @@
+import React from "react";
+import heroImage from "../assets/images/hero.png";
+
 const Hero = () => {
   return (
-    <section className="relative mx-3 min-h-[570px] overflow-hidden bg-[#f0f0f2]">
-      {/* Architecture Image */}
-      <div className="absolute right-0 top-0 h-full w-full lg:w-[55%]">
-        <img
-          src="/architecture.jpg"
-          alt="Modern architecture"
-          className="h-full w-full object-cover object-center"
-        />
+    <section className="relative min-h-[770px] overflow-hidden bg-[#f1f1f3]">
+     
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+        }}
+      />
 
-        {/* Fade between image and content */}
-        <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-[#f0f0f2] via-[#f0f0f2]/60 to-transparent lg:w-[55%]" />
-      </div>
+      {/* Light overlay / gradient
+          Keeps the left side readable when you add the image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f1f1f3] via-[#f1f1f3]/95 to-[#f1f1f3]/20" />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-[570px] items-center px-8 py-16 md:px-14 lg:w-[60%] lg:px-[110px]">
-        <div>
-          <h1 className="text-[42px] font-medium leading-[1.5] tracking-[-1.5px] text-[#1d3544] sm:text-[50px]">
+      <div className="relative z-10 mx-auto flex min-h-[570px] max-w-[1170px] items-center">
+        <div className="w-full px-8 py-20 sm:px-12 lg:w-[58%] lg:px-0">
+          {/* Heading */}
+          <h1 className="max-w-[570px] text-[42px] font-medium leading-[1.55] tracking-[-1.8px] text-[#1d3544] sm:text-[48px] md:text-[50px]">
             Diversified Services.
             <br />
             Unvarying Quality.
           </h1>
 
-          <p className="mt-7 max-w-[475px] text-[13.5px] leading-[1.7] text-[#32617e]">
+          {/* Description */}
+          <p className="mt-7 max-w-[440px] text-[13.5px] font-normal leading-[1.7] tracking-[0.05px] text-[#32617e]">
             We designed 100+ commercial & residential projects
             <br className="hidden sm:block" />
             in USA & across the globe. Providing Design & 3D
@@ -30,27 +35,37 @@ const Hero = () => {
             Support to Architectural Firms Globally. Award-
             <br className="hidden sm:block" />
             Winning Company.{" "}
-            <strong className="font-semibold text-[#172e3e]">
+            <span className="font-semibold text-[#172f40]">
               17+ Years Of Experience.
-            </strong>
+            </span>
           </p>
 
           {/* Actions */}
           <div className="mt-12 flex items-center gap-6">
-            <button className="h-[55px] rounded-[4px] bg-[#243b47] px-11 text-[15px] font-medium text-white transition hover:bg-[#304d5a]">
+            {/* See Our Work */}
+            <button
+              type="button"
+              className="flex h-[55px] min-w-[200px] items-center justify-center rounded-[4px] border border-[#142c3b] bg-[#243b47] px-8 text-[15px] font-medium text-white transition-all duration-200 hover:bg-[#304d5a]"
+            >
               See Our Work
             </button>
 
-            <button className="group flex items-center gap-3 text-[#142d3e]">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border-[1.5px] border-[#142d3e] transition group-hover:scale-105">
+            {/* Explore */}
+            <button
+              type="button"
+              className="group flex items-center gap-2 text-[#142c3b]"
+            >
+              {/* Play button */}
+              <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#142c3b] transition-transform duration-200 group-hover:scale-105">
                 <svg
                   width="12"
                   height="14"
                   viewBox="0 0 12 14"
                   fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M11 7L1 13V1L11 7Z"
+                    d="M10.5 7L1 12.5V1.5L10.5 7Z"
                     stroke="currentColor"
                     strokeWidth="1.2"
                     strokeLinejoin="round"
@@ -58,48 +73,12 @@ const Hero = () => {
                 </svg>
               </span>
 
-              <span className="h-px w-16 bg-[#142d3e]" />
+              {/* Line */}
+              <span className="h-[1px] w-[65px] bg-[#142c3b]" />
 
-              <span className="text-base">Explore</span>
+              {/* Text */}
+              <span className="text-[16px] font-normal">Explore</span>
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Daniel Johns */}
-      <div className="absolute right-[25%] top-[67px] z-20 hidden w-[181px] items-center gap-3 rounded-[5px] bg-white px-3 py-3 shadow-[0_4px_16px_rgba(0,0,0,0.08)] lg:flex">
-        <img
-          src="/daniel.jpg"
-          alt="Daniel Johns"
-          className="h-10 w-10 rounded-full object-cover"
-        />
-
-        <div>
-          <p className="text-[16px] font-medium leading-none text-[#162e3f]">
-            Daniel Johns
-          </p>
-
-          <div className="mt-1.5 text-[15px] leading-none tracking-[-1px] text-[#f2d52b]">
-            ★★★★★
-          </div>
-        </div>
-      </div>
-
-      {/* Martha May */}
-      <div className="absolute bottom-[150px] right-[34%] z-20 hidden w-[181px] items-center gap-3 rounded-[5px] bg-white px-3 py-3 shadow-[0_4px_16px_rgba(0,0,0,0.08)] lg:flex">
-        <img
-          src="/martha.jpg"
-          alt="Martha May"
-          className="h-10 w-10 rounded-full object-cover"
-        />
-
-        <div>
-          <p className="text-[16px] font-medium leading-none text-[#162e3f]">
-            Martha May
-          </p>
-
-          <div className="mt-1.5 text-[15px] leading-none tracking-[-1px] text-[#f2d52b]">
-            ★★★★★
           </div>
         </div>
       </div>
